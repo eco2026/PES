@@ -3,298 +3,488 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cours complet détaillé - Problèmes Économiques et Sociaux (S4)</title>
+    <title>📚 Problèmes Économiques et Sociaux – S4 (Révision détaillée)</title>
     <style>
+        /* CSS plus soigné pour la révision */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f4f6f9;
+            color: #1d2b3a;
+            padding: 2rem 1.5rem;
             line-height: 1.7;
-            color: #1e2a3a;
-            background-color: #eef2f5;
-            padding: 30px 20px;
         }
-
-        .main-container {
-            max-width: 1300px;
+        .container {
+            max-width: 1150px;
             margin: 0 auto;
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
-            padding: 40px 50px;
+            border-radius: 28px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.07);
+            padding: 2.5rem 2.5rem;
         }
-
-        /* Typographie */
         h1 {
-            font-size: 2.8rem;
-            color: #0b3b5f;
-            text-align: center;
-            border-bottom: 4px solid #2c7da0;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #0a2f4a;
+            border-left: 8px solid #1e7ea5;
+            padding-left: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+        .subhead {
+            font-size: 1.1rem;
+            color: #3d5a73;
+            background: #e9f0f6;
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
             display: inline-block;
-            width: auto;
-            padding-bottom: 12px;
-            margin-bottom: 15px;
+            margin-bottom: 2rem;
+            font-weight: 500;
         }
-
-        .header-section {
-            text-align: center;
-            margin-bottom: 40px;
+        .chapter {
+            margin-top: 2.8rem;
+            border-top: 2px solid #dde5ee;
+            padding-top: 2rem;
         }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: #2c3e50;
-            background: #eaf4f9;
-            display: inline-block;
-            padding: 8px 20px;
-            border-radius: 30px;
-            margin-top: 15px;
-        }
-
-        h2 {
+        .chapter h2 {
             font-size: 2rem;
-            color: #1f6392;
-            margin-top: 2.2rem;
+            font-weight: 650;
+            color: #0d3d5c;
             margin-bottom: 1.2rem;
-            padding-left: 15px;
-            border-left: 6px solid #2c7da0;
-            background: #f9fbfd;
-            padding: 12px 15px;
-            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-
-        h3 {
-            font-size: 1.6rem;
-            color: #2a6f8f;
-            margin-top: 1.8rem;
-            margin-bottom: 0.8rem;
-            padding-left: 12px;
-            border-left: 4px solid #61a5c2;
-        }
-
-        h4 {
-            font-size: 1.3rem;
-            color: #2c3e50;
-            margin: 1.2rem 0 0.6rem 0;
-            font-weight: 600;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-
-        /* Encadrés spéciaux */
-        .definition {
-            background: #e9f5f9;
-            border-left: 8px solid #2c7da0;
-            padding: 18px 25px;
-            border-radius: 16px;
-            margin: 25px 0;
+        .chapter h2 small {
             font-size: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            font-weight: 400;
+            color: #2c6e8f;
+            background: #deeaf3;
+            padding: 0.2rem 1.2rem;
+            border-radius: 30px;
         }
-
-        .auteur {
-            background: #fff7e6;
-            border-left: 8px solid #f4a261;
-            padding: 15px 22px;
-            margin: 20px 0;
-            border-radius: 14px;
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1a4d6b;
+            margin: 1.8rem 0 0.9rem 0;
+            border-bottom: 2px solid #cbd9e6;
+            padding-bottom: 0.3rem;
         }
-
-        .note {
-            background: #fce4ec;
-            border-left: 8px solid #e63946;
-            padding: 15px 22px;
-            margin: 20px 0;
-            border-radius: 14px;
+        h4 {
+            font-weight: 700;
+            color: #1a4d6b;
+            margin: 1.3rem 0 0.5rem 0;
+            font-size: 1.1rem;
         }
-
+        .card-def {
+            background: #eff6fd;
+            padding: 1.2rem 2rem;
+            border-radius: 20px;
+            margin: 1.5rem 0;
+            border-left: 6px solid #1e7ea5;
+        }
+        .highlight-box {
+            background: #fbf3e6;
+            padding: 0.8rem 1.8rem;
+            border-radius: 16px;
+            margin: 1.2rem 0;
+            border: 1px solid #ecdcc7;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        @media (max-width: 680px) {
+            .container { padding: 1.5rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8rem; }
+        }
+        .bib {
+            background: #eaeef3;
+            padding: 1.2rem 2rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+        }
+        ul, .list-bullet {
+            padding-left: 2rem;
+            margin: 0.7rem 0 1.2rem 0;
+        }
+        li {
+            margin-bottom: 0.4rem;
+        }
+        .badge {
+            background: #1a5f7a;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.15rem 0.8rem;
+            border-radius: 30px;
+            letter-spacing: 0.3px;
+        }
+        .table-wrap {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 25px 0;
             font-size: 0.95rem;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
-
         th {
-            background-color: #2c7da0;
+            background: #1c4c69;
             color: white;
-            padding: 12px 10px;
+            padding: 0.7rem 1rem;
             text-align: left;
+            border-radius: 10px 10px 0 0;
         }
-
-        td {
-            border: 1px solid #d4dee5;
-            padding: 10px 12px;
-            vertical-align: top;
+        td, th {
+            padding: 0.7rem 1rem;
+            border-bottom: 1px solid #dce4ed;
         }
-
-        ul, ol {
-            margin: 1rem 0 1rem 2rem;
+        tr:last-child td {
+            border-bottom: none;
         }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        strong {
-            color: #1f6392;
-        }
-
-        .footer-credit {
-            margin-top: 45px;
-            text-align: center;
-            font-size: 0.85rem;
-            color: #6c7a89;
-            border-top: 1px solid #cbd5e0;
-            padding-top: 25px;
-        }
-
-        @media (max-width: 800px) {
-            .main-container {
-                padding: 20px;
-            }
-            h1 {
-                font-size: 2rem;
-            }
-            h2 {
-                font-size: 1.6rem;
-            }
+        .key-term {
+            font-weight: 600;
+            color: #003b5c;
         }
     </style>
 </head>
 <body>
-<div class="main-container">
-    <div class="header-section">
-        <h1>PROBLÈMES ÉCONOMIQUES ET SOCIAUX</h1>
-        <div class="subtitle">Semestre 4 – Option Économie · Année 2022-2023 · Cours complet et détaillé</div>
+<div class="container">
+    <h1>📘 Problèmes Économiques et Sociaux</h1>
+    <div class="subhead">Semestre 4 – Option Économie · Support complet · 2022-2023</div>
+
+    <!-- Introduction -->
+    <div style="background: #f0f6fc; border-radius: 24px; padding: 1.5rem 2rem; margin-bottom: 1.8rem;">
+        <p><strong>📌 Introduction générale :</strong> Les problèmes économiques et sociaux affectent le développement de l’économie de marché (pays développés et en développement). L’économie n’est pas autonome : elle est inséparable du volet social. L’analyse porte sur le précapitalisme, capitalisme, révolution industrielle, mondialisation, croissance, développement, emploi, chômage, pauvreté.</p>
+        <p><span class="badge">Plan</span> Chapitre 1 · Révolution industrielle  |  Chapitre 2 · Capitalisme  |  Chapitre 3 · Mondialisation  |  Chapitre 4 · Problèmes contemporains (croissance, chômage, inégalités, pauvreté)</p>
     </div>
 
-    <!-- ==================== INTRODUCTION ==================== -->
-    <h2>Introduction générale : penser les problèmes économiques et sociaux</h2>
-    <p>Les problèmes économiques et sociaux affectent le développement de l’économie de marché, tant dans les pays développés que dans les pays en développement. L’économie n’est pas une discipline autonome : elle est indissociable des dimensions sociales, politiques, historiques et culturelles. Ce cours analyse ces interactions à travers cinq grands thèmes : la révolution industrielle, le capitalisme, la mondialisation, les problèmes contemporains (croissance, chômage, pauvreté, inégalités) et l’apport de la sociologie économique.</p>
-    <div class="definition">
-        <strong>✔ Objectifs fondamentaux :</strong><br>
-        • Étudier les transitions du précapitalisme au capitalisme, la révolution industrielle, la mondialisation.<br>
-        • Comprendre les mécanismes de la croissance, du développement, de l’emploi et du chômage.<br>
-        • Analyser la pauvreté et les inégalités comme phénomènes multidimensionnels.<br>
-        • Mettre en évidence les interactions entre économie et société.
+    <!-- ================= CHAPITRE 1 ================= -->
+    <div class="chapter">
+        <h2>📖 Chapitre 1 <small>La Révolution industrielle (RI)</small></h2>
+        
+        <h3>1. Facteurs préparatoires</h3>
+        <ul>
+            <li><strong>Évolution intellectuelle :</strong> XVIIe siècle, l’homme assume la maîtrise technique de la terre, instaure le règne du capital.</li>
+            <li><strong>Révolution agricole :</strong> avant la RI, le monde est voué à l’agriculture. La RI engendre des processus démographiques difficiles à gérer.</li>
+            <li><strong>Naissance du terme :</strong> Adolphe Blanqui (1798-1854) par analogie à la Révolution française. Consolidé par Arnold Toynbee (1852-1883). Étudiée par Marx, Engels, J.S. Mill.</li>
+        </ul>
+        <div class="highlight-box">
+            <strong>✧ Proto-industrie :</strong> activité de production avant la RI. Caractéristiques : absence d’amélioration, production lente, distribution lente, nombre limité de travailleurs. Système intermédiaire avant l’industrialisation.
+        </div>
+
+        <h3>2. Étapes de la RI</h3>
+        <div class="table-wrap">
+            <table>
+                <tr><th>Phase</th><th>Période</th><th>Caractéristiques</th></tr>
+                <tr><td><strong>1ère phase</strong></td><td>À partir de 1750</td><td>Secteurs textiles (plume textile) et métallurgiques, machine à vapeur</td></tr>
+                <tr><td><strong>2ème phase</strong></td><td>À partir de 1870</td><td>Électricité, produits chimiques, pétrole</td></tr>
+            </table>
+        </div>
+        <ul>
+            <li>La société agricole et artisanale devient un <strong>système industriel</strong> : généralisation des machines, énergie mécanique, nouvelles sources d’énergie.</li>
+            <li>Apparition de la <strong>classe ouvrière</strong> : salaire contre temps de travail, profit pour l’entrepreneur.</li>
+        </ul>
+
+        <h3>3. Mécanismes de la RI</h3>
+        <ul>
+            <li><strong>Proto-industrialisation et putting-out system :</strong> marchand-manufacturier collecte la production des familles et fournit les matières premières. Le fabricant est exploité.</li>
+            <li><strong>Technologies clés :</strong> coton, fer, charbon, vapeur → chemin de fer comme secteur leader.</li>
+            <li><strong>Sidérurgie :</strong> fonte au charbon (1709) ; puddlage et laminage (1784) → production de fer à grande échelle et bas prix.</li>
+            <li><strong>Mines et énergie :</strong> extension du charbon grâce à la machine à vapeur (perfectionnée par Watt).</li>
+        </ul>
+
+        <h3>4. Impacts majeurs</h3>
+        <div class="grid-2">
+            <div>
+                <strong>👥 Société</strong>
+                <ul>
+                    <li>Nobles → capitaines d’industrie</li>
+                    <li>Paysans → prolétaires</li>
+                    <li>Assistants des grands propriétaires → bourgeoisie</li>
+                    <li><span class="key-term">Naissance du capitalisme moderne</span></li>
+                </ul>
+            </div>
+            <div>
+                <strong>📈 Démographie & urbanisme</strong>
+                <ul>
+                    <li>Population européenne : 70M (XVII-XVIIIe) → 250M (2 siècles)</li>
+                    <li>Espérance de vie : 45-50 ans → 75 ans</li>
+                    <li>Nombre d’enfants par femme : 5 → 2</li>
+                    <li>Villes : enceintes abattues, usines et population urbaine s’installent</li>
+                </ul>
+            </div>
+        </div>
+        <ul>
+            <li><strong>Transports :</strong> routes, voies ferrées, canaux.</li>
+        </ul>
+        <div class="highlight-box">
+            <strong>⚠️ Conclusion critique :</strong> La RI n’est pas totalement positive. Victor Hugo (<em>Les Misérables</em>), Dickens, Marx-Engels décrivent une humanité désespérée, égoïste, proche d’un nouvel esclavagisme. Cependant, les découvertes scientifiques ont modifié le visage économique des sociétés occidentales.
+        </div>
+        <div class="bib">📚 <strong>Bibliographie :</strong> Jacques Brasseul, « Petite histoire des faits économiques : des origines à nos jours », 4e édition, Armand Colin.</div>
     </div>
 
-    <!-- ==================== CHAPITRE 1 ==================== -->
-    <h2>Chapitre 1 : La Révolution industrielle – genèse d’un monde nouveau</h2>
-    <h3>1. Les facteurs préparatoires (XVIIe‑XVIIIe siècles)</h3>
-    <p>Avant l’industrialisation, l’Europe est agricole, artisanale et commerciale. Quatre facteurs créent les conditions du décollage : <strong>l’évolution intellectuelle</strong> (les Lumières, la croyance dans la maîtrise technique de la nature), <strong>la révolution agricole</strong> (nouveaux assolements, enclosures, hausse des rendements), <strong>les spécificités anglaises</strong> (stabilité politique, charbon, fer, main-d’œuvre libérée) et <strong>la naissance du concept</strong> (Adolphe Blanqui, Arnold Toynbee). La « proto‑industrie » (putting-out system) précède l’usine.</p>
-    <h3>2. Définition et phases de la révolution industrielle</h3>
-    <p>La révolution industrielle est un processus d’évolution économique caractérisé par l’essor de l’industrie, l’usage généralisé des machines, l’énergie mécanique et de nouvelles sources d’énergie. Elle se déploie en deux grandes phases :</p>
-    <ul>
-        <li><strong>Première phase (à partir de 1750)</strong> : textile (navette volante, jenny, mule-jenny) et métallurgie (fonte au coke, puddlage). Invention décisive : la machine à vapeur de James Watt (1769).</li>
-        <li><strong>Deuxième phase (à partir de 1870)</strong> : électricité, produits chimiques, pétrole, moteur à explosion, chemin de fer.</li>
-    </ul>
-    <h3>3. Mécanismes et innovations majeures</h3>
-    <p>Le <em>factory system</em> remplace la proto‑industrie. Les secteurs clés (coton, fer, charbon, vapeur) interagissent. La machine à vapeur actionne les métiers à tisser, les marteaux-pilons, puis la locomotive, bouleversant les transports. Parallèlement, la sidérurgie produit de l’acier à bas coût, et l’extraction minière s’intensifie.</p>
-    <div class="note">
-        <strong>Impact social radical :</strong> émergence de la bourgeoisie industrielle et du prolétariat. Les paysans deviennent ouvriers, l’exode rural s’accélère, la population urbaine explose. L’espérance de vie passe de 45 à 75 ans, la population européenne quadruple en deux siècles. Les romans de Victor Hugo (<em>Les Misérables</em>) et Dickens témoignent de la misère ouvrière, inspirant la critique de Marx et Engels.
+    <!-- ================= CHAPITRE 2 ================= -->
+    <div class="chapter">
+        <h2>🏛️ Chapitre 2 <small>Le capitalisme</small></h2>
+        <div class="card-def">
+            <strong>Définition :</strong> Système économique reposant sur l’accumulation de capital. Caractérisé par :
+            <ul style="margin-top: 0.5rem;">
+                <li>Accès au capital (banque/bourse)</li>
+                <li>Propriété privée des moyens de production</li>
+                <li>Recherche continue de profits</li>
+            </ul>
+        </div>
+
+        <h3>1. Origines</h3>
+        <ul>
+            <li>Capitalisme commercial (XVIe-XVIIIe), libéral (XIXe), institutionnel (XXe).</li>
+            <li><span class="key-term">La Révolution industrielle est le véritable début du capitalisme</span> : bouleversement des techniques, transformations démographiques et institutionnelles, suppression des contraintes réglementaires.</li>
+        </ul>
+
+        <h3>2. Piliers du capitalisme</h3>
+        <ul>
+            <li><strong>Propriété privée</strong> (biens matériels et immatériels)</li>
+            <li><strong>Intérêt personnel</strong> (main invisible, Adam Smith, 1776)</li>
+            <li><strong>Concurrence</strong> (maximise la prospérité sociale)</li>
+            <li><strong>Mécanisme de marché</strong> (prix déterminés par l’offre et la demande)</li>
+            <li><strong>Liberté de choix</strong> (consommation, production, investissement)</li>
+            <li><strong>Rôle limité des pouvoirs publics</strong> (protéger les droits, maintenir un bon fonctionnement des marchés)</li>
+        </ul>
+        <p><strong>Formes :</strong> économies de marché (réglementation minime) vs économies mixtes (le marché joue un rôle prépondérant mais l’État corrige les défaillances). Le capitalisme mixte est le modèle dominant.</p>
+
+        <h3>3. Évolution depuis la RI</h3>
+        <ul>
+            <li>Passage d’une société agricole et artisanale à une société commerciale et industrielle.</li>
+            <li>Combinaison des capitaux et du travail générant le profit par transformation de la nature.</li>
+        </ul>
+        <div class="table-wrap">
+            <table>
+                <tr><th>Facteur</th><th>Description</th></tr>
+                <tr><td>Transition démographique</td><td>Progrès de l’hygiène, médecine, alimentation abondante</td></tr>
+                <tr><td>Révolution agricole</td><td>Mécanisation, modification des méthodes de culture</td></tr>
+                <tr><td>Mutations culturelles</td><td>Émancipation de la tutelle de l’Église, accumulation du capital, initiative privée</td></tr>
+                <tr><td>Innovations majeures</td><td>Machine à vapeur, transport maritime, etc.</td></tr>
+            </table>
+        </div>
+
+        <h3>4. Classes sociales et conséquences</h3>
+        <ul>
+            <li><strong>Bourgeoisie :</strong> détient les moyens de production (banques, usines, terres, commerces) ; contrôle l’activité économique, politique et culturelle.</li>
+            <li><strong>Prolétariat :</strong> exode rural, chômage élevé, migration vers les pays neufs ou les centres urbains.</li>
+            <li><strong>Conséquences économiques :</strong> inégale répartition des richesses, naissance des crises économiques.</li>
+            <li><strong>Conséquences sociales :</strong> division en deux classes opposées, naissance du libéralisme (laisser faire, laisser passer) favorisant la conquête coloniale.</li>
+        </ul>
     </div>
 
-    <!-- ==================== CHAPITRE 2 ==================== -->
-    <h2>Chapitre 2 : Le capitalisme – mutations, crises et logique profonde</h2>
-    <div class="definition">
-        <strong>Définition :</strong> système économique fondé sur l’accumulation de capital, la propriété privée des moyens de production et la recherche continue du profit.
-    </div>
-    <h3>Les piliers du capitalisme (Adam Smith, La Richesse des nations, 1776)</h3>
-    <ul>
-        <li><strong>Propriété privée</strong> (biens matériels et immatériels).</li>
-        <li><strong>Intérêt personnel</strong> et « main invisible » : la poursuite de l’intérêt individuel sert l’intérêt général.</li>
-        <li><strong>Concurrence</strong> libre, maximisant la prospérité sociale.</li>
-        <li><strong>Mécanisme des prix</strong> : l’offre et la demande déterminent les prix et l’allocation des ressources.</li>
-        <li><strong>Liberté de choix</strong> (consommation, investissement, travail).</li>
-        <li><strong>Rôle limité de l’État</strong> : protection des droits et des biens collectifs.</li>
-    </ul>
-    <h3>Évolution et conséquences</h3>
-    <p>Le capitalisme connaît plusieurs étapes : capitalisme commercial, libéral (XIXe), institutionnel (XXe). La révolution industrielle marque ses véritables débuts. Quatre facteurs accélèrent son développement : transition démographique, révolution agricole, mutations culturelles (émancipation religieuse, valorisation de l’initiative privée) et innovations majeures. Sur le plan social, naissent deux classes antagonistes : la <strong>bourgeoisie</strong> (propriétaire des moyens de production) et le <strong>prolétariat</strong> (force de travail salariée). Sur le plan économique, inégale répartition des richesses et crises cycliques (1873, 1929). Idéologiquement, le libéralisme (« laisser faire, laisser passer ») justifie le libre‑échange et la conquête coloniale.</p>
-
-    <!-- ==================== CHAPITRE 3 ==================== -->
-    <h2>Chapitre 3 : La mondialisation – intégration et fragmentation</h2>
-    <p>La mondialisation désigne l’intensification des échanges de biens, services, capitaux, personnes et informations à l’échelle planétaire. Elle s’accélère depuis les années 1980 grâce aux révolutions technologiques (conteneur, internet), à la libéralisation (GATT, OMC) et à la fin de la guerre froide. Elle offre des débouchés étendus, des baisses de prix, mais aussi des délocalisations, une précarisation du travail et une accentuation des inégalités. L’État‑nation voit sa souveraineté limitée par la mobilité des capitaux et les règles du commerce mondial, mais il reste central pour redistribuer et protéger.</p>
-
-    <!-- ==================== CHAPITRE 4 ==================== -->
-    <h2>Chapitre 4 : Problèmes contemporains – croissance, chômage, pauvreté, inégalités</h2>
-    
-    <h3>I. Croissance économique et développement</h3>
-    <p>La <strong>croissance économique</strong> est l’accroissement durable du PIB (volume). Elle peut être extensive (plus de facteurs) ou intensive (gains de productivité). Les grandes théories : Smith (division du travail illimitée), Malthus (population vs production), Ricardo (état stationnaire), Marx (baisse tendancielle du taux de profit), Keynes (relance par la demande). Les facteurs de croissance sont multiples : travail (quantité et qualité), capital, progrès technique, ressources naturelles, consommation, investissement, dépenses publiques, exportations et contexte institutionnel.</p>
-    <div class="definition">
-        <strong>Limites du PIB :</strong> ignore les activités non marchandes, les atteintes à l’environnement, les inégalités et la qualité de vie. L’<strong>IDH</strong> (PNUD) intègre revenu, éducation et santé. Le rapport Stiglitz (2009) propose douze indicateurs élargis incluant le bien‑être subjectif et la soutenabilité.
+    <!-- ================= CHAPITRE 3 ================= -->
+    <div class="chapter">
+        <h2>🌐 Chapitre 3 <small>La mondialisation</small></h2>
+        <p style="background: #eef3f9; padding: 1rem 1.8rem; border-radius: 20px;"><strong>Définition :</strong> Phénomène d’intégration des économies, de libre-échange, de circulation des capitaux, des biens et des personnes. Elle accentue les interdépendances et peut générer des inégalités entre pays développés et en développement.</p>
+        <ul>
+            <li>La mondialisation est liée à l’expansion du capitalisme et des échanges internationaux.</li>
+            <li>Elle pose des défis en termes de régulation, de développement durable et de justice sociale.</li>
+        </ul>
+        <div class="highlight-box">
+            <em>Note :</em> Ce chapitre est inclus dans le plan du cours. Les documents fournis n’en détaillent pas le contenu, mais le contexte est celui de l’économie de marché globalisée.
+        </div>
     </div>
 
-    <h3>II. Le chômage</h3>
-    <p>Selon le BIT, un chômeur est une personne de +15 ans, sans travail, disponible et recherchant activement un emploi. Typologie : chômage frictionnel, saisonnier, conjoncturel, structurel, technique, technologique. Les causes incluent le coût du travail, l’inadéquation des qualifications, la faiblesse de la demande, le progrès technique, la concurrence internationale et l’évolution démographique.</p>
+    <!-- ================= CHAPITRE 4 (détaillé) ================= -->
+    <div class="chapter">
+        <h2>📊 Chapitre 4 <small>Problèmes contemporains</small></h2>
+        <p><strong>Introduction :</strong> Dysfonctionnements et inefficiences persistent malgré un stade de développement considérable. Problèmes de court terme (désordre monétaire, inflation → politiques conjoncturelles) et de long terme (croissance, chômage, retraites, démographie → politiques structurelles).</p>
 
-    <h3>III. Pauvreté et inégalités</h3>
-    <p>La pauvreté est un phénomène multidimensionnel (privation de ressources matérielles et immatérielles). On distingue l’<strong>approche monétaire</strong> (pauvreté absolue / relative, seuils monétaires) et l’<strong>approche par les capacités</strong> d’Amartya Sen (ce que les personnes peuvent être ou faire). L’Indice de pauvreté multidimensionnelle (IPM) combine santé, éducation et niveau de vie. Les politiques de lutte associent redistribution, services collectifs, emploi et développement local.</p>
-    <div class="note">
-        <strong>Chiffres clés :</strong> Au Maroc (HCP, 2014), seuil de pauvreté alimentaire : 2331 DH/personne/an ; seuil monétaire : ~4312‑4667 DH selon le milieu. En France, seuil de pauvreté relative = 60% du revenu médian.
+        <!-- I. Croissance -->
+        <h3>I. Croissance économique</h3>
+        <div class="card-def">
+            <strong>Définition :</strong> Accroissement durant une longue période de la performance économique, mesuré par le PIB (Produit Intérieur Brut) ou le PNB (Produit National Brut).
+        </div>
+        <ul>
+            <li><strong>PIB :</strong> logique territoriale. Somme des valeurs ajoutées produites par les résidents sur le territoire d’un pays.</li>
+            <li><strong>PNB :</strong> optique nationale. Somme des valeurs ajoutées produites par les nationaux, quel que soit leur lieu de résidence.</li>
+        </ul>
+
+        <h4>Visions des économistes sur la croissance</h4>
+        <div class="table-wrap">
+            <table>
+                <tr><th>Économiste</th><th>Vision</th></tr>
+                <tr><td>Adam Smith (1723-1790)</td><td>Division du travail → croissance illimitée</td></tr>
+                <tr><td>Thomas Malthus (1766-1834)</td><td>Population croît plus vite que la production → famines (court terme)</td></tr>
+                <tr><td>David Ricardo (1772-1823)</td><td>Rendements décroissants des terres → état stationnaire à long terme</td></tr>
+                <tr><td>Karl Marx (1818-1883)</td><td>Accumulation du capital → substitution au travail → chômage, baisse des salaires, baisse du profit → baisse de la croissance</td></tr>
+                <tr><td>John Maynard Keynes (1883-1946)</td><td>Rôle de l’État par les investissements publics pour relancer la demande et favoriser la croissance</td></tr>
+            </table>
+        </div>
+
+        <h4>Formes de la croissance</h4>
+        <ul>
+            <li><strong>Extensive :</strong> augmentation quantitative des facteurs de production (plus de travail, plus de machines, plus de matières premières). N’améliore pas significativement le niveau de vie.</li>
+            <li><strong>Intensive :</strong> gains de productivité, meilleure utilisation des facteurs, organisation du travail améliorée, main-d’œuvre plus qualifiée. Conduit à une augmentation réelle du PIB par habitant.</li>
+            <li><strong>Molle :</strong> taux de croissance annuels faibles.</li>
+        </ul>
+
+        <h4>Facteurs de la croissance</h4>
+        <div class="grid-2">
+            <div>
+                <strong>📦 Facteurs liés à l’offre</strong>
+                <ul>
+                    <li>Travail (quantité et qualité)</li>
+                    <li>Capital (argent et technique)</li>
+                    <li>Progrès technique et innovations (nouveaux procédés, nouveaux produits)</li>
+                    <li>Ressources naturelles (indispensables, à préserver)</li>
+                </ul>
+            </div>
+            <div>
+                <strong>📈 Facteurs liés à la demande</strong>
+                <ul>
+                    <li>Consommation et investissement</li>
+                    <li>Dépenses publiques (relance, soutien)</li>
+                    <li>Échanges extérieurs (libre-échange)</li>
+                    <li>Contexte institutionnel (réglementation, droits de propriété, climat de confiance)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <strong>⚠️ Limites du PIB :</strong>
+            <ul>
+                <li>Ne mesure pas la qualité de vie</li>
+                <li>Ignore les activités non monétisées (travail domestique, bénévolat)</li>
+                <li>Ne dit rien sur la répartition (le PIB par habitant est une moyenne)</li>
+                <li>Ignore les atteintes à l’environnement (externalités négatives)</li>
+                <li>Sous-évalue la production non marchande (évaluée au coût de production, pas au prix de vente)</li>
+            </ul>
+        </div>
+
+        <!-- II. Développement et IDH -->
+        <h3>II. Développement et IDH</h3>
+        <div class="card-def">
+            <strong>Développement :</strong> Processus qualitatif de transformations des structures économiques, sociales, politiques et mentales qui accompagnent et favorisent la croissance économique.
+        </div>
+        <ul>
+            <li><strong>IDH (PNUD, 1990) :</strong> Indice composite allant de 0 à 1 (plus proche de 1 = plus favorable). Composé de 3 dimensions :</li>
+            <li>Niveau de vie (PIB/habitant à PPA) – 1/3</li>
+            <li>Éducation (taux d’alphabétisation des adultes + taux de scolarisation) – 1/3</li>
+            <li>Santé (espérance de vie à la naissance) – 1/3</li>
+        </ul>
+        <h4>Limites de l’IDH</h4>
+        <ul>
+            <li>Le PIB/habitant occupe une place importante (1/3)</li>
+            <li>Peu d’écart entre pays proches</li>
+            <li>Ne dit rien sur les inégalités</li>
+            <li>Ignore l’environnement, les droits politiques, la sécurité, les conditions de travail, la qualité de vie, etc.</li>
+        </ul>
+
+        <h4>Rapport de la Commission Stiglitz (14/09/09)</h4>
+        <ul>
+            <li>Se référer aux revenus et à la consommation pour évaluer le bien-être matériel.</li>
+            <li>Privilégier le point de vue des ménages (impôts, prestations sociales, services en nature).</li>
+            <li>Prendre en compte le patrimoine (bilan actif/passif).</li>
+            <li>Accorder plus d’importance à la répartition (médiane plutôt que moyenne).</li>
+            <li>Élargir les indicateurs aux activités non marchandes.</li>
+            <li>Améliorer les mesures de la santé, de l’éducation et des conditions environnementales.</li>
+            <li>Évaluer de manière exhaustive les inégalités (entre personnes, sexes, générations, immigration).</li>
+            <li>Établir une batterie d’indicateurs liés à l’environnement et à la soutenabilité.</li>
+        </ul>
+
+        <!-- III. Chômage -->
+        <h3>III. Chômage</h3>
+        <div class="card-def">
+            <strong>Définition (BIT) :</strong> Personne âgée de plus de 15 ans, sans travail, immédiatement disponible pour occuper un emploi, qui recherche activement du travail (au moins un acte positif de recherche).
+        </div>
+
+        <h4>Formes de chômage</h4>
+        <div class="table-wrap">
+            <table>
+                <tr><th>Forme</th><th>Description</th></tr>
+                <tr><td>Frictionnel</td><td>Temps nécessaire entre la cessation volontaire d’une activité et la reprise d’une autre</td></tr>
+                <tr><td>Saisonnier</td><td>Lié aux activités saisonnières (ex: agriculture)</td></tr>
+                <tr><td>Conjoncturel</td><td>Ralentissement de l’activité économique des entreprises</td></tr>
+                <tr><td>Structurel</td><td>Déséquilibre durable du marché du travail (excède la difficulté conjoncturelle)</td></tr>
+                <tr><td>Technique</td><td>Interruption courte du processus technique (panne, pénurie)</td></tr>
+                <tr><td>Technologique</td><td>Innovations qui économisent du travail (robotisation, informatisation)</td></tr>
+            </table>
+        </div>
+
+        <h4>Causes du chômage</h4>
+        <ul>
+            <li>Coût du travail industriel trop élevé (charges sur les entreprises)</li>
+            <li>Inadéquation entre l’offre et la demande d’emploi (qualification)</li>
+            <li>Stagnation de l’investissement et faiblesse de la demande intérieure</li>
+            <li>Coûts salariaux</li>
+            <li>Bouleversements technologiques (suppression d’emplois dans certains secteurs)</li>
+            <li>Concurrence internationale</li>
+            <li>Interdépendance des économies</li>
+            <li>Restructurations industrielles (économies d’échelle liées à la mondialisation)</li>
+            <li>Évolution démographique (activité des femmes, mouvements migratoires, natalité)</li>
+        </ul>
+
+        <!-- IV. Pauvreté et inégalités -->
+        <h3>IV. Pauvreté et inégalités</h3>
+        <div class="card-def">
+            <strong>Pauvreté :</strong> Situation d’une personne n’ayant pas les ressources suffisantes pour conserver un mode de vie normal ou y accéder. Phénomène complexe, pluridimensionnel.
+        </div>
+        <ul>
+            <li><strong>Manifestations :</strong> faiblesse ou absence de revenu, logement précaire, mauvaise santé, éducation insuffisante, sous-alimentation, environnement dégradé.</li>
+            <li><strong>Causes :</strong> chômage, salaires misérables, catastrophes naturelles, gaspillage, maladie, etc.</li>
+        </ul>
+
+        <h4>Approches de la pauvreté</h4>
+        <ul>
+            <li><strong>Approche monétaire (welfariste) :</strong> basée sur l’utilité. Le bien-être est approché par le revenu ou la dépense de consommation. On définit un seuil monétaire (absolu ou relatif) en deçà duquel on est pauvre.</li>
+            <li><strong>Approche non monétaire (non welfariste) :</strong> place le bien-être dans l’espace des libertés et des accomplissements. Deux sous-groupes :</li>
+            <ul>
+                <li><strong>Approche par les capacités (Sen, 1990) :</strong> l’individu doit avoir des capacités fondamentales (être nourri, éduqué, en bonne santé, logé, participer à la vie communautaire, etc.). Le revenu n’est qu’une dimension.</li>
+                <li><strong>Approche par les besoins de base (Alkire & Fooster, 2007-2009) :</strong> indice multidimensionnel de la pauvreté (MPI) développé par l’OPHI (Oxford Poverty and Human Development Initiative).</li>
+            </ul>
+        </ul>
+
+        <h4>Mesures de la pauvreté monétaire</h4>
+        <div class="table-wrap">
+            <table>
+                <tr><th>Type</th><th>Définition</th><th>Exemple</th></tr>
+                <tr><td><strong>Pauvreté absolue</strong></td><td>Non-satisfaction d’un minimum vital (besoins essentiels : nourriture, logement, vêtements, chauffage).</td><td>Rowntree (début XXe)</td></tr>
+                <tr><td><strong>Pauvreté relative</strong></td><td>Bas revenus par rapport à la population. Seuil fixé à un pourcentage du revenu moyen ou médian.</td><td>OCDE : &lt; 2/3 du revenu moyen</td></tr>
+            </table>
+        </div>
+
+        <h4>Seuil de pauvreté au Maroc (HCP, approche Banque Mondiale)</h4>
+        <ul>
+            <li><strong>Seuil de pauvreté alimentaire :</strong> coût d’un panier de biens et services alimentaires permettant le minimum requis en calories (1984 kcal/jour/personne, norme FAO/OMS). En 2014 : 2331 DH par personne et par an (urbain et rural).</li>
+            <li><strong>Seuil de pauvreté monétaire :</strong> seuil alimentaire + allocation non-alimentaire (coût des acquisitions non-alimentaires des ménages atteignant juste le minimum alimentaire). En 2014 : 4667 DH/an (urbain), 4312 DH/an (rural).</li>
+        </ul>
+        <div class="highlight-box">
+            <strong>Lutte contre la pauvreté :</strong> La Banque Mondiale et le PNUD sont les institutions phares. La pauvreté ne doit pas être réduite à sa seule expression monétaire. Lutter contre les inégalités est au cœur de la lutte contre la pauvreté. Politiques publiques : approche intégrée, multidimensionnelle.
+        </div>
+
+        <h4>Inégalités</h4>
+        <ul>
+            <li>Formes variées : revenu, patrimoine, scolaires, culturelles, générationnelles, genrées, politiques, etc.</li>
+            <li>Phénomène objectif et quantifiable, mais aussi subjectif (perception et ressenti).</li>
+        </ul>
     </div>
 
-    <!-- ==================== SOCIOLOGIE ÉCONOMIQUE ==================== -->
-    <h2>Sociologie économique – une autre lecture des faits économiques</h2>
-    <div class="definition">
-        Définition (Ph. Steiner) : « La sociologie économique étudie les faits économiques en les considérant comme des faits sociaux ». Selon Granovetter : action économique individuelle, résultats économiques (prix, salaires), institutions économiques.
-    </div>
-    <h3>Méthode et histoire de la pensée</h3>
-    <p>Opposition entre individualisme méthodologique (homo œconomicus) et holisme. Granovetter cherche une synthèse : l’action est toujours socialement située, les institutions sont construites socialement. La sociologie économique émerge après l’autonomisation de l’économie (mercantilistes, physiocrates, classiques). La « révolution marginaliste » (Jevons, Menger, Walras) consacre l’individu maximiseur.</p>
-    <h3>Trois grandes périodes</h3>
-    <ul>
-        <li><strong>1890-1920 (première SE)</strong> : Durkheim, Weber, Pareto, Simmel, Veblen. Querelle des méthodes (Schmoller vs Menger). Weber invente le terme « sociologie économique ».</li>
-        <li><strong>1920-1960 (stagnation/fragmentation)</strong> : paradigme « Économie & Société » (science des restes). Œuvres majeures : Polanyi (<em>La Grande Transformation</em>), Mauss (<em>Essai sur le don</em>).</li>
-        <li><strong>Nouvelle SE (1970 à nos jours)</strong> : critique de l’impérialisme néo‑classique. Concepts d’encastrement (embeddedness), réseaux, conventions. Écoles : MAUSS (anti-utilitariste), Régulation, Économie des conventions, New Economic Sociology.</li>
-    </ul>
-
-    <h3>Tableau des auteurs fondateurs (à maîtriser)</h3>
-    <table>
-        <thead><tr><th>Auteur</th><th>Concept(s) clé(s)</th><th>Thèse principale</th></tr>
-        </thead>
-        <tbody>
-            <tr><td>Émile Durkheim</td><td>Fait social, anomie, solidarité organique</td><td>La division du travail crée une solidarité nouvelle mais peut engendrer une carence de normes (anomie). Le contrat suppose des éléments non contractuels.</td></tr>
-            <tr><td>Max Weber</td><td>Rationalisation, éthique protestante, idéal‑type</td><td>L’esprit du capitalisme provient de l’éthique calviniste (ascétisme, travail comme vocation). Le capitalisme moderne repose sur le calcul rationnel et le salariat libre.</td></tr>
-            <tr><td>Karl Polanyi</td><td>Encastrement, marchandises fictives, double mouvement</td><td>Le marché autorégulateur est une construction historique récente et destructrice ; travail, terre et monnaie ne sont pas de vraies marchandises.</td></tr>
-            <tr><td>Marcel Mauss</td><td>Fait social total, don (donner‑recevoir‑rendre)</td><td>L’échange‑don est le fondement des sociétés, au‑delà de l’opposition intérêt/désintéressement.</td></tr>
-            <tr><td>Thorstein Veblen</td><td>Consommation ostentatoire, émulation sociale</td><td>Les comportements de consommation visent le prestige, non l’utilité. Critique de l’homo oeconomicus.</td></tr>
-            <tr><td>Mark Granovetter</td><td>Encastrement dans les réseaux sociaux, force des liens faibles</td><td>Même dans les économies avancées, la recherche d’emploi passe par les contacts personnels. Les liens faibles sont plus efficaces que les liens forts.</td></tr>
-        </tbody>
-    </table>
-
-    <h3>Apports de la Nouvelle sociologie économique (NSE)</h3>
-    <p>La NSE s’intéresse à la construction sociale du marché, des institutions et des réseaux. Trois approches dominent : l’analyse des réseaux (Granovetter), la sociologie culturelle (Zelizer) et la théorie des organisations. En France, l’économie des conventions (Boltanski, Thévenot) explore la pluralité des registres d’action et des grandeurs, tandis que l’école de la régulation (Aglietta, Boyer) analyse les formes institutionnelles (monnaie, rapport salarial, concurrence, État, relations internationales).</p>
-
-    <!-- ==================== CONCLUSION ET BIBLIOGRAPHIE ==================== -->
-    <h2>Conclusion générale : dépasser l’économisme, penser l’encastrement social</h2>
-    <p>La révolution industrielle et le capitalisme ont engendré une richesse inédite mais aussi des crises, des inégalités massives et un chômage structurel. La mondialisation accroît l’interdépendance tout en exposant aux délocalisations et à la précarité. La croissance du PIB reste un objectif central, mais ses limites imposent de lui adjoindre des indicateurs de développement humain (IDH, IPM) et de bien‑être subjectif. Enfin, la sociologie économique nous rappelle que l’économie n’est jamais purement « technique » ou « naturelle » : elle est toujours encastrée dans des institutions, des normes, des réseaux et des histoires particulières. « Avoir plus » ou « être mieux » ? Cette question traverse tout le cours et interroge nos modèles de société.</p>
-    
-    <div class="auteur">
-        <strong>Bibliographie de référence</strong><br>
-        • Jacques Brasseul, <em>Petite histoire des faits économiques</em>, Armand Colin.<br>
-        • Karl Polanyi, <em>La Grande Transformation</em>, 1944.<br>
-        • Carlo Trigilia, <em>Sociologie économique</em>, Armand Colin, 2002.<br>
-        • Richard Swedberg, <em>Une histoire de la sociologie économique</em>, Desclée de Brouwer, 1994.<br>
-        • Mark Granovetter, « Economic Action and Social Structure », <em>AJS</em>, 1985.<br>
-        • Amartya Sen, <em>Repenser l’inégalité</em>, Seuil, 2000.<br>
-        • Rapport Stiglitz-Sen-Fitoussi (2009) sur la mesure des performances économiques et du progrès social.
+    <!-- ===== CONCLUSION GÉNÉRALE ===== -->
+    <hr style="margin: 2.5rem 0 1.5rem;">
+    <div style="background: #e3edf6; border-radius: 24px; padding: 1.5rem 2.5rem;">
+        <p style="font-weight: 700; font-size: 1.3rem;">📌 Synthèse générale</p>
+        <p>La révolution industrielle a engendré le <strong>capitalisme</strong> et la société de classes (bourgeoisie/prolétariat). La mondialisation et la croissance économique (mesurée par le PIB) posent la question du <strong>développement durable</strong> et du bien-être. Le PIB ne suffit pas : l’IDH, les capacités (Sen) et les recommandations du rapport Stiglitz élargissent la perspective. Le chômage, la pauvreté et les inégalités sont des défis majeurs qui nécessitent des politiques structurelles et conjoncturelles.</p>
+        <p style="margin-top: 0.8rem; font-size: 1.05rem; font-weight: 500;">« Avoir plus ou être mieux ? » – La performance économique est aussi qualitative.</p>
     </div>
 
-    <div class="footer-credit">
-        Cours complet rassemblé pour le Semestre 4 – Option Économie. Document pédagogique destiné aux révisions et à l’approfondissement.
+    <div style="margin-top: 2rem; font-size: 0.9rem; color: #2f4b62; border-top: 1px solid #d0dce8; padding-top: 1.2rem; display: flex; justify-content: space-between; flex-wrap: wrap;">
+        <span>📄 Supports : support 1, 2, 4, 5, 6 – S4</span>
+        <span>🎓 Année universitaire 2022-2023 · Option Économie</span>
     </div>
 </div>
 </body>
